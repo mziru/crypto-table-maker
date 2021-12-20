@@ -1,0 +1,134 @@
+[
+  {
+    "label": "currency name",
+    "value": "name",
+    "selected": true,
+    "disabled": false
+  },
+  {
+    "label": "ticker symbol",
+    "value": "symbol",
+    "selected": true,
+    "disabled": false
+  },
+  {
+    "label": "slug",
+    "value": "slug",
+    "selected": false,
+    "disabled": false
+  },
+  {
+    "label": "number of market pairs",
+    "value": "num_market_pairs",
+    "selected": false,
+    "disabled": false
+  },
+  {
+    "label": "date added",
+    "value": "date_added",
+    "selected": false,
+    "disabled": false
+  },
+  {
+    "label": "circulating supply",
+    "value": "circulating_supply",
+    "selected": false,
+    "disabled": false
+  },
+  {
+    "label": "total supply",
+    "value": "total_supply",
+    "selected": false,
+    "disabled": false
+  },
+  {
+    "label": "CoinMarketCap rank",
+    "value": "cmc_rank",
+    "selected": false,
+    "disabled": false
+  },
+  {
+    "label": "last updated",
+    "value": "last_updated",
+    "selected": false,
+    "disabled": false
+  },
+  {
+    "label": "price (USD)",
+    "value": "quote.USD.price",
+    "selected": true,
+    "disabled": false
+  },
+  {
+    "label": "24-hour volume",
+    "value": "quote.USD.volume_24h",
+    "selected": false,
+    "disabled": false
+  },
+  {
+    "label": "24-hour volume change",
+    "value": "quote.USD.volume_change_24h",
+    "selected": false,
+    "disabled": false
+  },
+  {
+    "label": "1-hour percent change",
+    "value": "quote.USD.percent_change_1h",
+    "selected": false,
+    "disabled": false
+  },
+  {
+    "label": "24-hour percent change",
+    "value": "quote.USD.percent_change_24h",
+    "selected": false,
+    "disabled": false
+  },
+  {
+    "label": "7-day percent change",
+    "value": "quote.USD.percent_change_7d",
+    "selected": true,
+    "disabled": false
+  },
+  {
+    "label": "30-day percent change",
+    "value": "quote.USD.percent_change_30d",
+    "selected": true,
+    "disabled": false
+  },
+  {
+    "label": "60-day percent change",
+    "value": "quote.USD.percent_change_60d",
+    "selected": true,
+    "disabled": false
+  },
+  {
+    "label": "90-day percent change",
+    "value": "quote.USD.percent_change_90d",
+    "selected": true,
+    "disabled": false
+  },
+  {
+    "label": "market cap",
+    "value": "quote.USD.market_cap",
+    "selected": false,
+    "disabled": false
+  },
+  {
+    "label": "market cap dominance",
+    "value": "quote.USD.market_cap_dominance",
+    "selected": false,
+    "disabled": false
+  },
+  {
+    "label": "fully diluted market cap",
+    "value": "quote.USD.fully_diluted_market_cap",
+    "selected": false,
+    "disabled": false
+  },
+  {
+    "label": "last updated",
+    "value": "quote.USD.last_updated",
+    "selected": false,
+    "disabled": false
+  }
+]
