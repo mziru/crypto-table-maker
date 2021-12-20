@@ -137,15 +137,14 @@ def get_info(ticker_string, api_key, columns):
 
 def task_func():
     """
-    Runs tasks and callbacks based on user input
-    :return:
+    CryptoTableMaker
     """
     put_markdown('# CryptoTableMaker')
-    put_markdown('A simple web app for generating lightly customizable tables from CoinMarketCap data. Results can be '
-                 'viewed in the browser and downloaded as .csv files. The app requires an API key, which can be '
-                 'acquired here: https://coinmarketcap.com/api/. CryptoTableMaker works (for now) with a free Basic '
-                 'account. This site is not affiliated with CoinMarketCap and should  be used in accordance with all '
-                 'Terms of Service agreements.')
+    put_markdown('A simple web app for generating lightly customizable tables from live CoinMarketCap cryptocurrency '
+                 'data. Results can be viewed in the browser and downloaded as .csv files. The app requires an API '
+                 'key, which can be acquired here: https://coinmarketcap.com/api/. CryptoTableMaker works (for now) '
+                 'with a free Basic account. This site is not affiliated with CoinMarketCap and should  be used in '
+                 'accordance with all Terms of Service agreements.')
 
     api_key = input("Enter CoinMarketCap API key：", type=TEXT, required=True)
 
