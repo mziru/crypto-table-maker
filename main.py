@@ -34,7 +34,6 @@ def get_data(api_key):
     try:
         response = session.get(url, params=parameters)
         data = json.loads(response.text)
-        # put_text(data)
     except (ConnectionError, Timeout, TooManyRedirects) as e:
         put_text(e)
 
@@ -105,7 +104,7 @@ def get_ids(ticker_string, api_key):
         id_map = json.loads(response.text)
     #       print(id_map)
     except (ConnectionError, Timeout, TooManyRedirects) as e:
-        print(e)
+        put_text(e)
 
     cmc_ids = []
     for i in range(0, len(id_map['data'])):
