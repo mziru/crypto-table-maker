@@ -4,7 +4,7 @@ import pandas as pd
 from flask_socketio import SocketIO
 from pywebio.input import input, TEXT, checkbox
 from pywebio.output import put_text, put_file, put_html, put_markdown
-from pywebio.platform.flask import webio_view
+from pywebio.platform.flask import webio_view, wsgi_app
 from requests import Session
 from requests.exceptions import ConnectionError, Timeout, TooManyRedirects
 
