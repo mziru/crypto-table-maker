@@ -1,4 +1,6 @@
-runtime: python38
+runtime: python39
+
 handlers:
-- url: .*  
+- url: .*
+  secure: always
   script: main.app

@@ -2,7 +2,7 @@ import json
 import pandas as pd
 from pywebio.input import input, TEXT, checkbox
 from pywebio.output import put_text, put_file, put_html, put_markdown
-from pywebio.platform.flask import webio_view
+from pywebio.platform.flask import webio_view, wsgi_app, start_server
 from requests import Session
 from requests.exceptions import ConnectionError, Timeout, TooManyRedirects
 from flask import Flask
@@ -171,4 +171,4 @@ app.add_url_rule('/', 'webio_view', webio_view(task_func),
                  methods=['GET', 'POST', 'OPTIONS'])
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=False)
