@@ -1,12 +1,14 @@
 import json
+
 import pandas as pd
+from flask_socketio import SocketIO
 from pywebio.input import input, TEXT, checkbox
 from pywebio.output import put_text, put_file, put_html, put_markdown
-from pywebio.platform.flask import webio_view, wsgi_app, start_server
+from pywebio.platform.flask import webio_view
 from requests import Session
 from requests.exceptions import ConnectionError, Timeout, TooManyRedirects
-from flask import Flask, render_template
-from flask_socketio import SocketIO
+
+from flask import Flask
 
 app = Flask(__name__)
 socketio = SocketIO(app)
@@ -142,16 +144,16 @@ def task_func():
     CryptoTableMaker
     """
     put_markdown('# CryptoTableMaker')
-    put_markdown('A simple web app for generating lightly customizable tables from live CoinMarketCap cryptocurrency '
-                 'data. Results can be viewed in the browser and downloaded as .csv files. The app requires an API '
-                 'key, which can be acquired here: https://coinmarketcap.com/api/. CryptoTableMaker works (for now) '
-                 'with a free Basic account. This site is not affiliated with CoinMarketCap and should  be used in '
+    put_markdown('A simple web app for generating customizable tables from live CoinMarketCap cryptocurrency data. '
+                 'Results can be viewed in the browser and downloaded as .csv files. The app requires an API key, '
+                 'which can be acquired here: https://coinmarketcap.com/api/. CryptoTableMaker works (for now) with a '
+                 'free Basic account. This site is not affiliated with CoinMarketCap and should  be used in '
                  'accordance with all Terms of Service agreements.')
 
     api_key = input("Enter CoinMarketCap API key：", type=TEXT, required=True)
 
-    ticker_string = input("Enter cryptocurrency ticker symbols, seperated by commas (e.g. BTC, ETH, BNB). Or enter n "
-                          "between 1 and 100 for top n listings (e.g. 50).",
+    ticker_string = input("Enter cryptocurrency ticker symbols, seperated by commas (e.g. BTC, ETH, BNB)."
+                          "Or enter n between 1 and 100 for top n listings (e.g. 50).",
                           type=TEXT, required=True)
     if ticker_string.isdigit():
         ticker_string = int(ticker_string)
