@@ -7,3 +7,4 @@ Flask~=2.0.2
 pywebio~=1.5.0
 requests~=2.26.0
 pandas~=1.3.5
+Flask_SocketIO

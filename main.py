@@ -5,9 +5,11 @@ from pywebio.output import put_text, put_file, put_html, put_markdown
 from pywebio.platform.flask import webio_view, wsgi_app, start_server
 from requests import Session
 from requests.exceptions import ConnectionError, Timeout, TooManyRedirects
-from flask import Flask
+from flask import Flask, render_template
+from flask_socketio import SocketIO
 
 app = Flask(__name__)
+socketio = SocketIO(app)
 
 
 def get_data(api_key):
@@ -134,6 +136,7 @@ def get_info(ticker_string, api_key, columns):
     return df, info_df, info_html
 
 
+@socketio.event
 def task_func():
     """
     CryptoTableMaker
@@ -171,4 +174,4 @@ app.add_url_rule('/', 'webio_view', webio_view(task_func),
                  methods=['GET', 'POST', 'OPTIONS'])
 
 if __name__ == '__main__':
-    app.run(debug=False)
+    socketio.run(app, debug=True)
