@@ -124,7 +124,7 @@ def get_info(ticker_string, api_key, columns):
     :param ticker_string: str containing digits or comma seperated ticker symbols
     :param api_key:
     :param columns: list of column names from checkbox input, configurable in 'checkbox_config.txt'
-    :return: 3 outputs: unfiltered Pandas DataFrame with top 100 listings; filtered results as pandas DataFrame;
+    :return: unfiltered Pandas DataFrame with top 100 listings, filtered results as pandas DataFrame,
     filtered results as html (for display in browser)
     """
     df = get_data(api_key)
