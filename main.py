@@ -150,6 +150,7 @@ def task_func():
                  'free Basic account. This site is not affiliated with CoinMarketCap and should  be used in '
                  'accordance with all Terms of Service agreements.')
 
+    #TODO: sanitize input, i.e. return error if API key is an invalid string.
     api_key = input("Enter CoinMarketCap API key：", type=TEXT, required=True)
 
     ticker_string = input("Enter cryptocurrency ticker symbols, seperated by commas (e.g. BTC, ETH, BNB)."
